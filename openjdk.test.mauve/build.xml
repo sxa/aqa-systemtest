@@ -282,7 +282,7 @@ limitations under the License.
 	</target>
 
 	<target name="get-source" depends="download-cvsclient, create-work-dir" unless="already_built">
-                <exec dir="${work_dir}" executable="java">
+                <exec dir="${work_dir}" executable="java" output="${prereqs_root}/mauvecheckout.log" logError="true">
                                 <arg value="-Dcvs.root=:pserver:anoncvs@sourceware.org:/cvs/mauve"/>
                                 <arg value="-jar"/>
                                 <arg value="${prereqs_root}/cvsclient/org-netbeans-lib-cvsclient.jar"/>
