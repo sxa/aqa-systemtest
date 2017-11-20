@@ -286,6 +286,7 @@ limitations under the License.
                                 <arg value="-Dcvs.root=:pserver:anoncvs@sourceware.org:/cvs/mauve"/>
                                 <arg value="-jar"/>
                                 <arg value="${prereqs_root}/cvsclient/org-netbeans-lib-cvsclient.jar"/>
+                                <arg value="-q"/>
                                 <arg value="export"/>
                                 <arg value="-r"/>
                                 <arg value="HEAD"/>
