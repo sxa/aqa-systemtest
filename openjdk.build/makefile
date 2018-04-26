@@ -153,7 +153,7 @@ $(warning PREREQS_ROOT is $(PREREQS_ROOT))
 # Add JCK_ROOT to the PREREQS_ROOT directories if one has been provided on the command line
 ifneq (,$(JCK_ROOT))
   $(warning Adding JCK_ROOT $(JCK_ROOT) to PREREQS_ROOT $(PREREQS_ROOT))
-  PREREQS_ROOT:=$(PREREQS_ROOT);$(JCK_ROOT)
+  PREREQS_ROOT:=$(PREREQS_ROOT)_$(JCK_ROOT)
   $(warning PREREQS_ROOT is now $(PREREQS_ROOT))
 endif
 
