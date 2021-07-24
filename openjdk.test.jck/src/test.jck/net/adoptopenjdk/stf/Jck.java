@@ -522,7 +522,7 @@ public class Jck implements StfPluginInterface {
 		
 		extraJvmOptions += " " + test.getJavaArgs(test.env().primaryJvm()) + " ";
 
-		InetAddress addr = InetAddress.getLocalHost();
+		InetAddress addr = InetAddress.getByName("10.74.7.169");
 		ipAddress = addr.getHostAddress();
 		hostname = addr.getHostName();
 
