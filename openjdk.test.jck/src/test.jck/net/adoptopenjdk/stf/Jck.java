@@ -955,7 +955,7 @@ public class Jck implements StfPluginInterface {
 	private String getTestSpecificJvmOptions (StfCoreExtension test, String jckVersion, String tests) throws StfException {
 		String testSpecificJvmOptions = "";
 
-		if ( tests.contains("api/javax_net") ) {
+		if ( tests.contains("api/javax_net") || tests.contains("api/javax_imageio" ) ) {
 			// Needs extra security.properties
 			FileRef secPropsFile = test.env().getResultsDir().childDirectory("SecProps").childFile("security.properties");
 			testSpecificJvmOptions += " -Djava.security.properties=" + secPropsFile;
