@@ -156,9 +156,9 @@ ifeq ($(OS),sunos)
 endif
 
 ifeq ($(OS),aix)
-	CC=/opt/IBM/xlC/13.1.3/bin/xlc
-	CFLAGS=-qstaticinline -q$(BitMode) -I$(UNIX_PATH) -I$(OSX_PATH) -I$(SRC_PATH)
-	LDFLAGS=-G -q$(BitMode)
+	CC=/opt/freeware/bin/gcc-7
+	CFLAGS=-fPIC -I$(UNIX_PATH) -I$(OSX_PATH) -I$(SRC_PATH)
+	LDFLAGS=-shared
 endif
 
 ifeq ($(OS),zos)
