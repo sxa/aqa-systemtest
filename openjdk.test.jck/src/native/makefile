@@ -157,8 +157,8 @@ endif
 
 ifeq ($(OS),aix)
 	CC=/opt/freeware/bin/gcc-7
-	CFLAGS=-fPIC -I$(UNIX_PATH) -I$(OSX_PATH) -I$(SRC_PATH)
-	LDFLAGS=-shared
+	CFLAGS=-maix64 -fPIC -I$(UNIX_PATH) -I$(OSX_PATH) -I$(SRC_PATH)
+	LDFLAGS=-maix64 -shared
 endif
 
 ifeq ($(OS),zos)
