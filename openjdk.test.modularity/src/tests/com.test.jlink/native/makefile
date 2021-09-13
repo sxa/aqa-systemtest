@@ -153,10 +153,10 @@ ifeq ($(OS),zos)
 endif
 
 ifeq ($(OS),aix)
-    CC=xlC
-    LD=xlC
-    CFLAGS=-D_JNI_IMPLEMENTATION -D_TRIVIAL_AGENT -qnooptimize -g -qlanglvl=stdc99 -q$(BitMode) -c -o $(OBJDIR)/$(SRC)$(OSUFFIX)
-    LFLAGS=-G -q$(BitMode) -o 
+    CC=/opt/freeware/bin/g++-7
+    LD=/opt/freeware/bin/g++-7
+    CFLAGS=-D_JNI_IMPLEMENTATION -D_TRIVIAL_AGENT -g -c -o $(OBJDIR)/$(SRC)$(OSUFFIX)
+    LFLAGS=-shared -o 
 endif
 
 
