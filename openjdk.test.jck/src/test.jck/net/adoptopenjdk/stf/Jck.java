@@ -207,7 +207,7 @@ public class Jck implements StfPluginInterface {
 		testSuiteFolder = "JCK-" + testSuite.toString().toLowerCase() + "-" + jckVersionNo;
 		platform = test.env().getOsgiOperatingSystemName();	
 		jckBase = test.env().findPrereqDirectory(testSuiteFolder);
-                nativesLoc = new DirectoryRef("/home/saddisonxls/aixnatives");
+		nativesLoc = test.env().findPrereqDirectory("natives/" + test.env().getPlatformSimple());
 
 		DirectoryRef repositoryConfigLoc = test.env().findTestDirectory("openjdk.test.jck/config");
 		jtiFile = repositoryConfigLoc.childFile("/" + jckVersion + "/" + testSuite.toString().toLowerCase() + ".jti");
