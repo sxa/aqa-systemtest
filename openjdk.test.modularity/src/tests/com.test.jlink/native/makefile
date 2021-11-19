@@ -164,8 +164,8 @@ ifeq ($(OS),zos)
 endif
 
 ifeq ($(OS),aix)
-    CC=xlC
-    LD=xlC
+    CC=/opt/IBM/xlC/16.1.0/bin/xlC
+    LD=/opt/IBM/xlC/16.1.0/bin/xlC
     CFLAGS=-D_JNI_IMPLEMENTATION -D_TRIVIAL_AGENT -qnooptimize -g -qlanglvl=stdc99 -q$(BitMode) -c -o $(OBJDIR)/$(SRC)$(OSUFFIX)
     LFLAGS=-G -q$(BitMode) -o 
 endif
